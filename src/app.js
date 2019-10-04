@@ -2,9 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import routes from "./routes";
 
-//zejr@gmaul.com
-//Pikachu1
-
+//zejr@gmail.com
+//carlos123
 class App {
   constructor() {
     this.server = express();
