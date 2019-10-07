@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import routes from "./routes";
 import cors from "cors";
+import path from "path";
 
 //zejr@gmail.com
 //carlos123
@@ -22,8 +23,12 @@ class App {
   }
 
   middlewares() {
-    this.server.use(express.json());
     this.server.use(cors());
+    this.server.use(express.json());
+    this.server.use(
+      "/files",
+      express.static(path.resolve(__dirname, "..", "uploads"))
+    );
   }
 
   routes() {
